@@ -9,6 +9,9 @@ namespace WpfApp1.Views.Interfaces
     public interface IMainWindow
     {
 
+        void Close();
+        void Hide();
+        void Show();
         bool? ShowDialog();
 
     }

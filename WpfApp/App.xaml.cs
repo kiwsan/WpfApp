@@ -25,7 +25,7 @@ namespace WpfApp1
 
             var window = container.Resolve<IMainWindow>();
 
-            window.ShowDialog();
+            window.Show();
 
         }
 
