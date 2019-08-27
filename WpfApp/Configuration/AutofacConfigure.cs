@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WpfApp1.Services;
+using WpfApp1.Services.Implements;
+using WpfApp1.Services.Interfaces;
 using WpfApp1.ViewModels.Implements;
 using WpfApp1.ViewModels.Interfaces;
 using WpfApp1.Views.Implements;
@@ -23,6 +25,7 @@ namespace WpfApp1.Configuration
             builder.RegisterType<MainViewModel>().As<IMainViewModel>().SingleInstance();
 
             builder.RegisterType<HelloService>().As<IHelloService>();
+            builder.RegisterType<PersonDumpService>().As<IPersonService>();
 
             return builder.Build();
         }

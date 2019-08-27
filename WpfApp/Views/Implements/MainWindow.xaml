@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="{Binding Title}" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <ListView x:Name="listViewPersons" ItemsSource="{Binding Persons}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Window>
